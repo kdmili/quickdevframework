@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>明细</title>
+</head>
+<body class="container">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">
+			<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+		</button>
+		<h4 class="modal-title">[[${entityName}]] 详情</h4>
+	</div>
+	<div class="modal-body">
+		<form action="" class="form-horizontal">
+			<div class="form-group" th:each="c : ${columns}"
+				th:if="${!c.hidden &&  !c.persistype.toString().equals('MANY_TO_MANY')&& !c.persistype.toString().equals('ONE_TO_MANY')}"
+				th:switch="${c.uiType==null?'Auto':c.uiType.ftype().toString()}">
+				<label class="col-sm-3 control-label" th:text="${c.columnName}">title</label>
+				<div class="col-sm-9">
+					<div th:case="Auto" type="text"  >
+						<label th:text="${c.getValue(entity)}" >default </label>
+						</div> 
+						<a th:case="File" th:href="@{~/__${c.getValue(entity)}__}">下载附件</a>
+					<div th:case="Img" th:if="${not #strings.isEmpty(c.getValue(entity))}" 	class="thumbnail" >
+						<img src="" th:src="@{~/__${c.getValue(entity)}__}" />
+					</div>
+						<div th:case="Dictionary" th:text="${dictionary.get(c.dictName).get(c.getValue(entity))}">
+							Dictionary </div> 
+					<div th:case="Cust" th:text="${c.uiType.readHtml()}" />
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>

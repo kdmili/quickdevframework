@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:replace="::title"></title>
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{~/css/bootstrap.min.css}" />
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{~/css/bootstrap-theme.css}" />
+<script type="text/javascript" th:src="@{~/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{~/js/bootstrap.min.js}"></script>
+<script type="text/javascript"  th:src="@{~/js/common.js}"></script>
+</head>
+
+<body class="container-fluid">
+	<nav class="navbar navbar-default">
+		<ul class="nav nav-pills">
+			<li><a href="/">首页</a></li>
+			<li><a href="/">参数配置</a></li>
+			<li><a href="/">用户管理</a></li>
+			<li><a href="/">权限管理</a></li>
+		</ul>
+	</nav>
+
+	<div layout:fragment="content">this is tempalte layout content</div>
+	
+	<footer layout:fragment="footer">
+		<p class="text-center">copy right reserve</p>
+	</footer>
+</body>
+
+</html>
