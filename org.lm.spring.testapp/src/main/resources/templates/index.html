@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<body class="container">
+
+	<h3 layout:fragment="content">
+		custindex欢迎你： <span th:text="${user.username}"></span>
+	</h3>
+
+</body>
+</html>
