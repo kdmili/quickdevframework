@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/org.lm.spring.iml" filepath="$PROJECT_DIR$/org.lm.spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.lm.spring.quick/org.lm.spring.quick.iml" filepath="$PROJECT_DIR$/org.lm.spring.quick/org.lm.spring.quick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.lm.spring.testapp/org.lm.spring.testapp.iml" filepath="$PROJECT_DIR$/org.lm.spring.testapp/org.lm.spring.testapp.iml" />
+    </modules>
+  </component>
+</project>
