@@ -1,0 +1,729 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"vis",
+				"visitType"
+			],
+			[
+				"form",
+				"format"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"uk-margin-top",
+				"uk-margin-large-top \tUIkit class"
+			],
+			[
+				"uk-form-con",
+				"uk-form-controls-text \tUIkit class"
+			],
+			[
+				"uk-button",
+				"uk-button-large \tUIkit class"
+			],
+			[
+				"uk-margin-bo",
+				"uk-margin-large-bottom \tUIkit class"
+			],
+			[
+				"uk-hi",
+				"uk-hidden-small \tUIkit class"
+			],
+			[
+				"uk-wi",
+				"uk-width-1-5 \tUIkit class"
+			],
+			[
+				"uk-fomr-sm",
+				"uk-form-width-small \tUIkit class"
+			],
+			[
+				"uk-pag",
+				"uk-pagination-next \tUIkit class"
+			],
+			[
+				"uk-pagin",
+				"uk-pagination-right \tUIkit class"
+			],
+			[
+				"uk-nav",
+				"uk-nav \tUIkit class"
+			],
+			[
+				"uk-acc",
+				"uk-accordion-content \tUIkit class"
+			],
+			[
+				"uk-modal-",
+				"uk-modal-dialog \tUIkit class"
+			],
+			[
+				"uk-icon",
+				"uk-icon-music \tUIkit class"
+			],
+			[
+				"uk-dropdown",
+				"uk-dropdown-small \tUIkit class"
+			],
+			[
+				"data-uk",
+				"data-uk-dropdown"
+			],
+			[
+				"tab",
+				"tabcontent"
+			],
+			[
+				"ta",
+				"tab2"
+			],
+			[
+				"uk-na",
+				"uk-nav"
+			],
+			[
+				"uk-w",
+				"uk-width-2-4 \tUIkit class"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsPurchaseApply.aspx",
+			"settings":
+			{
+				"buffer_size": 10903,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsPurchaseApply.aspx.cs",
+			"settings":
+			{
+				"buffer_size": 5358,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsPurchaseAprove.aspx",
+			"settings":
+			{
+				"buffer_size": 6467,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsListInitial.aspx",
+			"settings":
+			{
+				"buffer_size": 8131,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/BasicMT/GoodsClassificationMT.aspx.cs",
+			"settings":
+			{
+				"buffer_size": 9565,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "ay=[\n{0001:[{0001,sdfsdf},{0001,jjjjjj}]}\n];",
+			"settings":
+			{
+				"buffer_size": 44,
+				"line_ending": "Windows",
+				"name": "ay=["
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 85.0,
+		"last_filter": "Package Control: install package",
+		"selected_items":
+		[
+			[
+				"Package Control: install package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: list",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install local dependency",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"v",
+				"File: Save All"
+			],
+			[
+				"cool",
+				"CoolFormat: Formatter Settings"
+			],
+			[
+				"list pack",
+				"Package Control: List Packages"
+			],
+			[
+				"installp",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package→安装插件"
+			],
+			[
+				"i",
+				"Package Control: Install Package→安装插件"
+			]
+		],
+		"width": 378.0
+	},
+	"console":
+	{
+		"height": 58.0,
+		"history":
+		[
+			"list"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/work/kp/KH.MISWeb",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/App_Code",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/BasicMT"
+	],
+	"file_history":
+	[
+		"/D/work/back/StatisticsVisitFeeDetailMapper.xml",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-web-mgmt-das/bin/properties/database.properties",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-system-das/bin/properties/database.properties",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-statisticlog-das/bin/properties/database.properties",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-healthycare-das/bin/properties/database.properties",
+		"/D/KH_Log/DbLog/2016-11-15.log",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-cust-satisfaction-das/bin/properties/database.properties",
+		"/D/work/kp/OA_OLD/js/vue.min.js",
+		"/D/work/kp/账号.txt",
+		"/D/KH_Log/DbLog/2016-11-13.log",
+		"/D/work/kp/OA_OLD/AssetMT/PurchaseMT/GoodsPurchaseApply.aspx",
+		"/D/work/doc/私有云部署/顺义/顺义的相关配置.txt",
+		"/D/work/kp/KH.MISWeb/KH.CodeMaticWeb/Build/BuildPageList.aspx",
+		"/D/Downloads/grid-2.1.0/pqgrid.min.js",
+		"/D/用户目录/sourceCode/thymeleafexamples-stsm/src/main/java/thymeleafexamples/stsm/web/controller/SeedStarterMngController.java",
+		"/D/Downloads/grid-2.1.0/themes/Scripts/PqGrid/pqgrid.min.js",
+		"/D/work/kp/OA_OLD/js/PqGrid/pqgrid.min.js",
+		"/D/work/kp/OA_OLD/js/PqGrid/pqgrid.js",
+		"/D/WizNote/userdata/Data/kdmili@tom.com/My Notes/工作/5b175127-5192-4ca6-90c3-189432ca9d57.ziw",
+		"/C/Users/liming/Desktop/bak/GoodsClassificationMT.aspx",
+		"/C/Users/liming/Desktop/update.sql",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-healthycare-das/bin/properties/dubbo.properties",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-message-das/bin/properties/database.properties",
+		"/D/work/kp/bak/GS_PsnApply.aspx",
+		"/D/work/doc/私有云部署/浙江人民医院/科室数据.sql",
+		"/D/work/kp/bak/GoodsPsnNoBackApply.aspx.cs",
+		"/D/work/kp/bak/GoodsPsnNoBackApply.aspx",
+		"/D/work/doc/私有云部署/浙江人民医院/科室.csv",
+		"/D/work/pcloud/build/pcloud-builder/src/database/mysql/pcloud_create.sql",
+		"/D/work/doc/私有云部署/浙江人民医院/hc_staff.sql",
+		"/D/work/kp/kpmis_view.sql",
+		"/D/work/doc/pdca_updated.sql",
+		"/D/work/doc/私有云部署/浙江人民医院/hc_department.sql",
+		"/D/work/doc/私有云部署/浙江人民医院/省人民医院医生信息.csv",
+		"/D/work/doc/私有云部署/浙江人民医院/service_unit.sql",
+		"/D/work/kp/khmis.sql",
+		"/D/work/kp/KH.MISWeb/dev/精简菜单.sql",
+		"/D/work/back/GoodsPsnListQuery.aspx.cs",
+		"/D/work/back/GoodsPsnListQuery.aspx",
+		"/D/work/kp/bak/GS_PsnApply.aspx.cs",
+		"/D/temp/logs/error.log",
+		"/D/dev/apache-tomcat-7.0.52-windows-x64/apache-tomcat-7.0.52-windows-x64/apache-tomcat-7.0.52/bin/catalina.bat",
+		"/D/dev/apache-tomcat-7.0.52-windows-x64/apache-tomcat-7.0.52-windows-x64/apache-tomcat-7.0.52/bin/startup.bat",
+		"/C/Users/liming/Desktop/爱奇艺vip/非常有逼格爱奇艺vip视频解析网站源码/index.html",
+		"/D/Tencent/344701012/FileRecv/科室-new.csv",
+		"/C/Users/liming/Desktop/科室-new.csv",
+		"/C/Users/liming/Desktop/new.csv",
+		"/D/work/kp/模块说明",
+		"/D/work/kp/精简菜单.sql",
+		"/D/work/doc/董盟数据/2.sql",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/BasicMT/GoodsClassificationMT.aspx",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/BasicMT/GoodsClassificationMT.aspx.cs",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/CateClass/CatClassificationAdd.aspx.cs",
+		"/D/work/kp/KH.MISWeb/KH.Business/OA/GS_GoodsAdminBLL.cs",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/CateClass/CatClassification.aspx.cs",
+		"/C/Users/liming/Desktop/EmrQcResultMapper.xml",
+		"/D/work/kp/old/KPMISWeb/OA/AssetMT/BasicMT/GoodsClassificationMT.aspx",
+		"/D/work/kp/old/KPMISWeb/Flow/CstFlowMthDetail.aspx.cs",
+		"/D/work/kp/old/KPMISWeb/OA/AssetMT/BasicMT/GoodsMT.aspx.cs",
+		"/D/dev/apache-tomcat-7.0.52-windows-x64/apache-tomcat-7.0.52-windows-x64/apache-tomcat-7.0.52/conf/server.xml",
+		"/D/work/doc/新员工资料/zookeeper-3.4.6/conf/zoo.cfg",
+		"/D/dev/myjavaproject/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/pcloud-web-mgmt/WEB-INF/classes/properties/sysconfig.properties",
+		"/D/Tencent/344701012/FileRecv/地址.txt",
+		"/D/用户目录/sourceCode/vue/index.html",
+		"/D/work/doc/病例质控数据/11.sql",
+		"/D/temp/logs/pcloud/das/healthycare/das.log",
+		"/C/Program Files (x86)/PDMReader/cfg/config.xml",
+		"/D/work/kp/KH.MISWeb/KH.MISWeb/KH.MISWeb.csproj",
+		"/D/work/pcloud/build/pcloud-install/V1.0.0.5/pcloud-healthycare-das/bin/log4j.xml",
+		"/D/work/doc/病例质控数据/dump-health_cloud-201610261501.sql",
+		"/D/work/kp/KHMIS_backup_2016_10_26_000001_1434887.sql.bak",
+		"/D/Xamarin Studio/bin/XamarinStudio.exe.config",
+		"/D/work/kp/old/KPMISData/KPMISDataBase.cs",
+		"/D/Tencent/344701012/FileRecv/log.txt",
+		"/C/Users/liming/Desktop/aa.json",
+		"/D/work/doc/展示开发question.txt",
+		"/D/work/kp/KH.MISWeb/KH.Service/OA/GS_DeviceListDAL.cs",
+		"/D/Tencent/344701012/FileRecv/updatedSQL.sql",
+		"/D/dev/html/xwebmanager/add.html",
+		"/D/360/123/BLL/GS_PsnApplyBLL.cs",
+		"/D/work/SMSMaster/SMSWeb/src/main/webapp/css/base.css",
+		"/D/Downloads/SteelrayProjectViewer/crack/keygen.html",
+		"/D/用户目录/sourceCode/isis-app-quickstart/webapp/src/main/webapp/swagger-ui/index.html",
+		"/D/用户目录/sourceCode/isis-app-quickstart/webapp/src/main/java/domainapp/webapp/DomainApplication.java",
+		"/D/Tencent/344701012/FileRecv/开发项目进度表(全).mpp",
+		"/C/Users/liming/Desktop/Bas_CategoryList.aspx.cs",
+		"/C/Users/liming/Desktop/Bas_CategoryList.aspx",
+		"/C/Users/liming/Desktop/Bas_Category.aspx.cs",
+		"/D/360/123/DAL/Bas_CategoryDAL.cs",
+		"/D/360/123/Entity/Bas_Category.cs",
+		"/D/work/kp/Backup/KPMISData/KPMISDataBase.dbml",
+		"/D/Downloads/sublimetext3pjb_47542/Sublime Text 3.3126x64/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/Downloads/sublimetext3pjb_47542/Sublime Text 3.3126x64/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/Downloads/sublimetext3pjb_47542/Sublime Text 3.3126x64/Data/Packages/DocBlockr/README.md",
+		"/D/work/back/MedicalRecords-details05_2.jsp",
+		"/D/work/back/ServiceUnit_200204.java",
+		"/D/work/back/EmrDasImpl.java",
+		"/D/work/back/ServiceUnit_200202.java",
+		"/D/work/back/ResponseMessage_200214.java",
+		"/D/dev/html/xwebmanager/index.html",
+		"/D/dev/html/xwebmanager/list.html",
+		"/D/Downloads/sublimetext3pjb_47542/Sublime Text 3.3126x64/Data/Packages/CoolFormat/CoolFormatLib/CoolFormatConfig.cfconfig",
+		"/C/Users/liming/Desktop/qq.html",
+		"/D/Downloads/sublimetext3pjb_47542/Sublime Text 3.3126x64/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Downloads/sublimetext3pjb_47542/Sublime Text 3.3126x64/Data/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 92.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"appo",
+			"GSP_ID",
+			"purchDetailBinder",
+			"purchDetails",
+			"                                <",
+			"                                ",
+			"purchDetailBinder",
+			"priceBinder",
+			"gdPriceInfo",
+			"list",
+			"save(",
+			"  <p v-if=\"$validation1.message.minlength\">Too short message.</p>",
+			"init",
+			"use",
+			"add_Table",
+			".png",
+			"GSt_Type",
+			"primary key",
+			"result_score",
+			"pcloud.",
+			"t_mgmt_right_class",
+			"pcloud.",
+			"select \n    m.*\n    from HC_VISIT_MASTER_INDEX m left join HC_DOCUMENT_INDEX d on m.VISIT_ID=d.VISIT_ID",
+			"42008321X000000-1",
+			"CSR_ADVERSE_EVENT",
+			"create table",
+			"https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js",
+			"pcloud_dev.",
+			"open",
+			"open:",
+			"                            |",
+			"post",
+			",",
+			"=\"\">",
+			"hide_auto_complete",
+			"alt+/",
+			"\t\t \n",
+			"\t<div class=\"uk-panel-title\">查询</div>",
+			"uk-button-danger",
+			"\t\t\n",
+			"          \n",
+			"\t\t\t\t \n",
+			"\t\t\t\t\n",
+			"compl",
+			"complete",
+			"autocomplete"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"`t_mgmt_right_class`",
+			"",
+			"https://cdn.bootcss.com/jquery/3.1.0/jquery.js",
+			"",
+			"☻checked≌",
+			"uk-button"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "D:\\work\\kp\\KH.MISWeb"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsPurchaseApply.aspx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsPurchaseApply.aspx.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2415.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsPurchaseAprove.aspx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/PurchaseMT/GoodsListInitial.aspx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								918,
+								918
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3933.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/work/kp/KH.MISWeb/KH.MISWeb/CommonModule/OA/AssetMT/BasicMT/GoodsClassificationMT.aspx.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 9565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8646,
+								8646
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 5340.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6,
+								40
+							]
+						],
+						"settings":
+						{
+							"auto_name": "ay=[",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 132.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 331.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

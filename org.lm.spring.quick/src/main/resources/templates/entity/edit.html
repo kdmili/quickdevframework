@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+<title>编辑</title>
+</head>
+<body layout:fragment="content">
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal_pick">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">选择</h4>
+      </div>
+      <div class="modal-body">
+       <iframe width="100%" class="autoHeight"></iframe>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+	<form method="post" enctype="multipart/form-data" action=""
+		id="form_edit" th:action="@{~/entity/edit_save/__${entityName}__}"
+		class="form-horizontal">
+		<h4 class="modal-title">编辑[[${entityName}]]</h4>
+	
+		<div class="form-group" th:each="c : ${columns}"
+			th:if="${!c.hidden  &&  !c.persistype.toString().equals('MANY_TO_MANY')&& !c.persistype.toString().equals('ONE_TO_MANY')}"
+			th:switch="${c.uiType==null?'Auto':c.uiType.ftype().toString()}">
+			<label class="col-sm-2 control-label" th:text="${c.columnName}">title</label>
+			<div class="col-sm-10" th:object="${entity}"  th:classappend="${#fields.hasErrors( c.columnName )}?'has-error':'' " >
+				<div th:case="Auto">
+					<div th:if="${c.persistype.toString().equals('BASIC')}"
+						th:switch="${c.javaType}">
+						<input th:case="${T(java.lang.Number)}"
+							th:field="*{__${c.columnName}__}" th:if="${c.editAble}"
+							type="number" class="form-control" /> 
+							
+						<input  
+							th:case="${T(java.util.Date)}"  th:field="*{__${c.columnName}__}" 
+							th:if="${c.editAble}"  type="date"    
+							class="form-control" /> 
+						<input th:case="*"
+							th:field="*{__${c.columnName}__}" th:if="${c.editAble}"
+							type="text" class="form-control" /> 
+						<input 
+							th:field="*{__${c.columnName}__}" th:if="${not c.editAble}"
+							readonly="readonly" type="text" class="form-control" /> 
+							
+					</div>
+					<div th:if="${not c.persistype.toString().equals('BASIC')}"
+						th:with="editUrl=@{~/__${c.javaType.simpleName}__/pick}">
+						<a class="control-label" th:name="${c.columnName+'.id'}"
+							th:if="${c.editAble}" href="#"
+							th:data-url="@{~/entity/pick/__${c.javaType.getSimpleName()}__}"
+							onClick="$('#modal_pick iframe').attr('src',$(this).attr('data-url'));$('#modal_pick').modal('show')"
+							th:text="${#strings.isEmpty(c.getValue(entity))?  c.javaType.getSimpleName() : c.getValue(entity)}">
+							选择 </a> <span th:if="${not c.editAble}"
+							th:text="${c.getValue(entity)}">default entity value </span> <input
+							type="hidden" th:field="*{__${c.columnName}__.id}" />
+					</div>
+				</div>
+				<div th:case="File"	th:with=" name='$(\'[name='+${c.columnName}+']\')'">
+					<a th:if="${not #strings.isEmpty(c.getValue(entity))}"
+						th:href="@{~/__${c.getValue(row)}__}">download</a> 
+					<input type="file"  th:name="${c.columnName}"  /> 
+					<input type="hidden" th:field="*{__${c.columnName}__}"  /> 
+					<a href="#" th:onclick="${ name+'.val('''')' }">删除</a>
+				</div>
+
+				<div th:case="Img" class="thumbnail"  th:with=" name='$(\'[name='+${c.columnName}+']\')'">
+					<img src=""
+					th:src="@{~/__${c.getValue(entity)}__}" /> 
+					<input type="file" th:name="${c.columnName}" /> 
+					<input type="hidden" th:field="*{__${c.columnName}__}"    /> 
+					<a href="#" th:onclick="${ name+'.val('''')' }">删除</a>
+				</div>
+
+
+				<div th:case="Dictionary">
+					<select class="form-control" th:field="*{__${c.columnName}__}">
+						<option th:each="o : ${dictionary.get(c.dictName)}"
+							th:text="${o.value}" th:value="${o.key}">
+					</select>
+				</div>
+				
+				<div th:case="Cust" th:text="${c.uiType.readHtml()}" />
+				
+				<p th:if="${#fields.hasErrors(c.columnName)}"    th:errors="*{__${c.columnName}__}">Incorrect date</p>
+			</div>
+		</div>
+
+
+		<div class="text-center">
+			<button type="submit" class="btn btn-save">保存</button>
+			<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+		</div>
+	</form>
+
+
+</body>
+</html>

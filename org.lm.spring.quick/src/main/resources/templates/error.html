@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>错误</title>
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{~/css/bootstrap.min.css}" />
+<link rel="stylesheet" type="text/css" href=""
+	th:href="@{~/css/bootstrap-theme.css}" />
+<script type="text/javascript" th:src="@{~/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{~/js/bootstrap.min.js}"></script>
+</head>
+<body class="container">
+	<div class="text-center">
+
+		<div class="panel panel-default">
+			<h4 class="panel-header">访问的页面发生错误</h4>
+
+			<div class="panel-body alert alert-danger">
+				<p th:text="${message}"  >message</p>
+				<p>exception:[[${exception}]] 状态：[[${status}]]</p>
+		<!-- 		<div th:if="${!string.Empty(trace)}" class="text-center"  th:text="${trace}">trace</div> -->
+			</div>
+
+		</div>
+
+
+		<div th:text="${trace}">详情</div>
+	</div>
+</body>
+</html>

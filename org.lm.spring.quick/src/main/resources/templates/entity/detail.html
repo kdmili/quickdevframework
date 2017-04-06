@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+<meta charset="UTF-8">
+<title>明细</title>
+</head>
+<body layout:fragment="content">
+
+	<h4 class="modal-title">[[${entityName}]] 详情</h4>
+
+
+	<form action="" class="form-horizontal">
+		<div class="form-group" th:each="c : ${columns}"
+			th:if="${!c.hidden &&  !c.persistype.toString().equals('MANY_TO_MANY')&& !c.persistype.toString().equals('ONE_TO_MANY')}"
+			th:switch="${c.uiType==null?'Auto':c.uiType.ftype().toString()}">
+			<label class="col-sm-3 control-label" th:text="#{__${c.columnName}__}">title</label>
+			<div class="col-sm-9">
+				<div th:case="Auto">
+					<label th:if="${c.javaType==T(java.util.Date)}" th:text="${#dates.format(c.getValue(entity),'yyyy-MM-dd')}">date value </label> 
+					<label th:if="${c.javaType!=T(java.util.Date)}" th:text="${c.getValue(entity)}">default value </label>
+				</div>
+				<a th:case="File" th:href="@{~/__${c.getValue(entity)}__}">下载附件</a>
+				<div th:case="Img"
+					th:if="${not #strings.isEmpty(c.getValue(entity))}"
+					class="thumbnail">
+					<img src="" th:src="@{~/__${c.getValue(entity)}__}" />
+				</div>
+				<div th:case="Dictionary"
+					th:text="${dictionary.get(c.dictName).get(c.getValue(entity))}">
+					Dictionary</div>
+				<div th:case="Cust" th:text="${c.uiType.readHtml()}" />
+			</div>
+		</div>
+	</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

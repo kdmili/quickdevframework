@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+
+</head>
+<body class="container">
+	<div layout:fragment="content">
+		<h3>
+			欢迎你： <span th:text="${user.username}"></span>
+		</h3>
+		<form action="/loginout" method="post">
+			<div>
+				<button class="btn btn-primary" type="submit">退出</button>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
