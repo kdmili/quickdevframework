@@ -10,21 +10,38 @@
 
 
 	<form action="" class="form-horizontal">
-		<div class="form-group" th:each="c : ${columns}"
+		<div  class="form-group"	 th:each="c : ${columns}"
 			th:if="${!c.hidden &&  !c.persistype.toString().equals('MANY_TO_MANY')&& !c.persistype.toString().equals('ONE_TO_MANY')}"
 			th:switch="${c.uiType==null?'Auto':c.uiType.ftype().toString()}">
 			<label class="col-sm-3 control-label" th:text="#{__${c.columnName}__}">title</label>
 			<div class="col-sm-9">
-				<div th:case="Auto">
+				<span th:case="Auto">
 					<label th:if="${c.javaType==T(java.util.Date)}" th:text="${#dates.format(c.getValue(entity),'yyyy-MM-dd')}">date value </label> 
 					<label th:if="${c.javaType!=T(java.util.Date)}" th:text="${c.getValue(entity)}">default value </label>
-				</div>
-				<a th:case="File" th:href="@{~/__${c.getValue(entity)}__}">下载附件</a>
-				<div th:case="Img"
-					th:if="${not #strings.isEmpty(c.getValue(entity))}"
-					class="thumbnail">
-					<img src="" th:src="@{~/__${c.getValue(entity)}__}" />
-				</div>
+				</span>
+			 <span th:case="File"  th:if ="${#objects.nullSafe(c.getValue(entity) ,false)}"> 
+							<div th:if="${T(java.util.Collection).isAssignableFrom(c.getJavaType()) }"  >
+								 	<ol>
+						 			<li th:each="item :${ c.getValue(entity)}"  ><a   th:href="@{~/__${item}__}"   th:text="@{~/__${item}__}">download</a></li>
+						 			</ol>
+							</div>
+							<div th:if="${  not T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  >
+								 <a	th:if="${not #strings.isEmpty(c.getValue(entity))}"  th:href="@{~/__${c.getValue(entity)}__}">download</a>
+							</div> 
+							</span>
+								
+						 <span 	th:case="Img" 	 th:if ="${#objects.nullSafe(c.getValue(entity) ,false)}"> 
+						 	<div th:if="${ T(java.util.Collection).isAssignableFrom(c.getJavaType()) }"  >
+						 	<ol>
+						 		<li th:each="item :${ c.getValue(entity)}"  ><a th:href="@{~/__${item}__}"   th:text="@{~/__${item}__}">img</a></li>
+						 	</ol>
+								<a class="thumbnail"><img th:src="@{~/__${c.getValue(entity)}__}" /></a>
+							</div>
+							<div th:if="${ not T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  >
+								 <a class="thumbnail" ><img th:src="@{~/__${c.getValue(entity)}__}" /></a>
+							</div> 
+						</span> 
+						
 				<div th:case="Dictionary"
 					th:text="${dictionary.get(c.dictName).get(c.getValue(entity))}">
 					Dictionary</div>

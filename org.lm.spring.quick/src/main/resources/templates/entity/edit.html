@@ -20,13 +20,14 @@
 </div><!-- /.modal -->
 
 
-	<form method="post" enctype="multipart/form-data" action=""
+	<form method="post"  action=""
 		id="form_edit" th:action="@{~/entity/edit_save/__${entityName}__}"
 		class="form-horizontal">
 		<h4 class="modal-title">编辑[[${entityName}]]</h4>
 	
+	<input type="hidden" name="id"  th:value="${entity.id}">
 		<div class="form-group" th:each="c : ${columns}"
-			th:if="${!c.hidden  &&  !c.persistype.toString().equals('MANY_TO_MANY')&& !c.persistype.toString().equals('ONE_TO_MANY')}"
+			th:if="${!c.hidden  && c.editAble &&  !c.persistype.toString().equals('MANY_TO_MANY')&& !c.persistype.toString().equals('ONE_TO_MANY')}"
 			th:switch="${c.uiType==null?'Auto':c.uiType.ftype().toString()}">
 			<label class="col-sm-2 control-label" th:text="${c.columnName}">title</label>
 			<div class="col-sm-10" th:object="${entity}"  th:classappend="${#fields.hasErrors( c.columnName )}?'has-error':'' " >
@@ -61,20 +62,30 @@
 							type="hidden" th:field="*{__${c.columnName}__.id}" />
 					</div>
 				</div>
-				<div th:case="File"	th:with=" name='$(\'[name='+${c.columnName}+']\')'">
-					<a th:if="${not #strings.isEmpty(c.getValue(entity))}"
-						th:href="@{~/__${c.getValue(row)}__}">download</a> 
-					<input type="file"  th:name="${c.columnName}"  /> 
-					<input type="hidden" th:field="*{__${c.columnName}__}"  /> 
-					<a href="#" th:onclick="${ name+'.val('''')' }">删除</a>
+			 
+
+			<div th:case="File"  class="_uploadContainer row"   	 th:attrappend="mutilfile=${T(java.util.List).isAssignableFrom(c.getJavaType())?'true':'false' }">	
+					<div class="col-sm-6"><input type="file"  th:hidName="${c.columnName}"   /> </div>
+					<div th:if="${T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  th:each="item:${c.getValue(entity)}">
+						<input type="hidden"  th:value="${item}"  th:name="${c.columnName}" >
+						<a href="javascript:" onclick="$(this).parent().remove()" >[[@{~/__${item}__}]]<i class='glyphicon glyphicon-minus'></i></a></div>
+					 
+					<div th:if="${  not T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  >
+						<input type="hidden"  th:value="${c.getValue(entity)}"  th:name="${c.columnName}" >
+								 <a	th:if="${not #strings.isEmpty(c.getValue(row))}"  th:href="@{~/__${c.getValue(row)}__}">download</a>
+					</div> 
 				</div>
 
-				<div th:case="Img" class="thumbnail"  th:with=" name='$(\'[name='+${c.columnName}+']\')'">
-					<img src=""
-					th:src="@{~/__${c.getValue(entity)}__}" /> 
-					<input type="file" th:name="${c.columnName}" /> 
-					<input type="hidden" th:field="*{__${c.columnName}__}"    /> 
-					<a href="#" th:onclick="${ name+'.val('''')' }">删除</a>
+				<div th:case="Img" class="thumbnail _uploadContainer row"	  >
+					<div class="col-sm-6"><input type="file" th:hidName="${c.columnName}"   /> </div>
+					<div th:if="${T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  th:each="item:${c.getValue(entity)}">
+						<input type="hidden"  th:value="${item}"  th:name="${c.columnName}" >
+						<a href="javascript:" onclick="$(this).parent().remove()" >[[@{~/__${item}__}]]<i class='glyphicon glyphicon-minus'></i></a></div>
+					 
+					<div th:if="${  not T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  >
+						<input type="hidden"  th:value="${c.getValue(entity)}"  th:name="${c.columnName}" >
+								 <a	th:if="${not #strings.isEmpty(c.getValue(row))}"  th:href="@{~/__${c.getValue(row)}__}">download</a>
+					</div> 
 				</div>
 
 

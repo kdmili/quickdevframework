@@ -77,5 +77,11 @@ public class HomeController {
 		return mv;
 
 	}
+	
+	@RequestMapping("/uptest")
+	public String test_upload(ModelMap m){
+		m.put("user", new Users());
+		return "inputTest";
+	}
 
 }

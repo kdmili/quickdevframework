@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.support.WebRequestDataBinder;
+import org.springframework.web.context.request.WebRequest;
 
 @Service
 public class WebFormDataBinder {
@@ -25,13 +27,14 @@ public class WebFormDataBinder {
 	
  
 
-	public BindingResult bind(Object obj, PropertyValues propvalues) {
+	public BindingResult bind(Object obj, WebRequest req) {
 
-		WebDataBinder binder = new WebDataBinder(obj,"entity");
+	
+		WebRequestDataBinder binder = new WebRequestDataBinder(obj,"entity");
 		binder.addCustomFormatter(new DateFormatter());
 		for(Validator v:this.validators)
 		binder.addValidators(v);
-		binder.bind(propvalues);
+		binder.bind(req);
 		binder.validate();
 		// jpa entity reference
 		List<ColumnMeta> columns = EntityUtil.getColumnMeta(this.em.getMetamodel(), obj.getClass());

@@ -23,7 +23,7 @@ public class CommonController {
 		if(file.isEmpty())return null;
 		String fileName = file.getOriginalFilename();
 		int index = fileName.indexOf(".");
-		fileName = UUID.randomUUID().toString() + fileName.substring(index);
+		fileName = UUID.randomUUID().toString() + (index>-1?fileName.substring(index):"");
 		UploadStatus res=new UploadStatus();
 		try {
 			FileCopyUtils.copy(file.getBytes(),

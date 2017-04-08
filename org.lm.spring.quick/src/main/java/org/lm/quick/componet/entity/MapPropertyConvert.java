@@ -16,7 +16,7 @@ public class MapPropertyConvert implements AttributeConverter<Map<?, ?>,String> 
 
 	@Override
 	public String convertToDatabaseColumn(Map<?, ?> attribute) {
-		if(attribute==null)return null;
+		if(attribute==null || attribute.isEmpty())return null;
 		return JSON.toJSONString(attribute);
 	}
 

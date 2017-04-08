@@ -28,21 +28,30 @@
 							th:switch="${c.uiType==null?'Auto':c.uiType.ftype().toString()}"
 							th:if="${!c.hidden &&  !c.persistype.toString().equals('MANY_TO_MANY')&& !c.persistype.toString().equals('ONE_TO_MANY')}">
 
-							<span th:case="Auto" th:text="${c.getValue(row)}">auto</span>
-							 <span th:case="File"  th:if ="c.getValue(row)!=null "> 
-							<div th:if="${T(java.util.Collection).class.isAssignableFrom(c.getValue(row).getClass())}"  th:each="item : ${c.getValue(row)}">
-								<a th:href="@{~/__${item}__}">downloadFileitem</a>
+							<span th:case="Auto"  >
+								<label th:if="${c.javaType==T(java.util.Date)}" th:text="${#dates.format(c.getValue(row),'yyyy-MM-dd')}">date value </label> 
+								<label th:if="${c.javaType!=T(java.util.Date)}" th:text="${c.getValue(row)}">default value </label>
+							</span>
+							
+							 <span th:case="File"  th:if ="${#objects.nullSafe(c.getValue(row) ,false)}"> 
+							<div th:if="${T(java.util.Collection).isAssignableFrom(c.getJavaType()) }"  >
+								 	<ol>
+						 			<li th:each="item :${ c.getValue(row)}"  ><a   th:href="@{~/__${item}__}"   th:text="@{~/__${item}__}">download</a></li>
+						 			</ol>
 							</div>
-							<div th:if="${  not T(java.util.Collection).class.isAssignableFrom(c.getValue(row).getClass())}"  >
+							<div th:if="${  not T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  >
 								 <a	th:if="${not #strings.isEmpty(c.getValue(row))}"  th:href="@{~/__${c.getValue(row)}__}">download</a>
 							</div> 
 							</span>
 								
-						 <span 	th:case="Img" 	th:if ="c.getValue(row)!=null "> 
-						 	<div th:if="${ T(java.util.Collection).class.isAssignableFrom(c.getValue(row).getClass())}"  th:each="item :${ c.getValue(row)}">
+						 <span 	th:case="Img" 	 th:if ="${#objects.nullSafe(c.getValue(row) ,false)}"> 
+						 	<div th:if="${ T(java.util.Collection).isAssignableFrom(c.getJavaType()) }"  >
+						 	<ol>
+						 		<li th:each="item :${ c.getValue(row)}"  ><a th:href="@{~/__${item}__}"   th:text="@{~/__${item}__}">img</a></li>
+						 	</ol>
 								<div class="thumbnail"><img th:src="@{~/__${c.getValue(row)}__}" /></div>
 							</div>
-							<div th:if="${ not T(java.util.Collection).class.isAssignableFrom(c.getValue(row).getClass())}"  >
+							<div th:if="${ not T(java.util.Collection).isAssignableFrom(c.getJavaType())}"  >
 								 <div class="thumbnail"><img th:src="@{~/__${c.getValue(row)}__}" /></div>
 							</div> 
 						</span> 
@@ -52,7 +61,6 @@
 								Dictionary </span> 
 					<span th:case="Cust"
 							th:text="${c.uiType.readHtml()}">Cust</span>
-
 						</td>
 
 						<td><a  href=""

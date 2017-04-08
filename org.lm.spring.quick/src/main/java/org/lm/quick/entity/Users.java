@@ -1,9 +1,11 @@
 package org.lm.quick.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -12,6 +14,7 @@ import javax.persistence.OneToOne;
 import org.hibernate.annotations.NaturalId;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
+import org.lm.quick.componet.entity.ListProprertyConvert;
 import org.lm.quick.ui.annotation.Ordered;
 import org.lm.quick.ui.annotation.UIField;
 import org.lm.quick.ui.annotation.UIField.FType;
@@ -51,15 +54,17 @@ public class Users extends BaseEntity {
 	private Date regDate;
 
 
-	@OneToOne(cascade = CascadeType.PERSIST)
-	@JoinColumn(name = "homeId")
-	private Home home;
 
 	@UIField(ftype = FType.Img)
 	private String photo;
 
 	@UIField(ftype = FType.File)
 	private String file;
+	
+	@Convert(converter=ListProprertyConvert.class)
+	@UIField(ftype=FType.File)
+	private List<String> downloads;
+	
 	@UIField(ftype = FType.Dictionary, dictionaryKey = "sex")
 	private Integer sex;
 
@@ -85,14 +90,6 @@ public class Users extends BaseEntity {
 
 	public void setPhoto(String photo) {
 		this.photo = photo;
-	}
-
-	public Home getHome() {
-		return home;
-	}
-
-	public void setHome(Home home) {
-		this.home = home;
 	}
 
 	public String getUsername() {
@@ -124,4 +121,12 @@ public class Users extends BaseEntity {
 		this.recordInfo = recordInfo;
 	}
 
+	public List<String> getDownloads() {
+		return downloads;
+	}
+	
+	public void setDownloads(List<String> downloads) {
+		this.downloads = downloads;
+	}
+	
 }
